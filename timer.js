@@ -1,3 +1,5 @@
+'use strict';
+
 class Timer {
     constructor(durationInput, startButton, pauseButton) {
         this.durationInput = durationInput;
@@ -5,23 +7,30 @@ class Timer {
         this.pauseButton = pauseButton;
         this.startButton.addEventListener('click', this.start);
         this.pauseButton.addEventListener('click', this.pause);
-        this.durationInput.addEventListener('input', this.duration);
+        this.durationInput.addEventListener('input', this.onDurationChange);
     }
 
-    /*info about person and age*/
+    start = () => {
+        this.tick();
+        this.interval = setInterval(this.tick, 500);
+        document.body.style.backgroundColor = 'green';
 
-    /*destructuring to minimize writing out this */
-    start() {
-        console.log('the start button was pressed');
+    };
+
+    pause = () => {
+        clearInterval(this.interval);
+        document.body.style.backgroundColor = 'red';
+    };
+
+    onDurationChange() {
+        console.log(`duration was entered`);
     }
 
-    pause() {
-        console.log('pause button pressed');
-    }
+    tick = () => {
+        console.log('tick was called');
+    };
 
-    duration() {
-        console.log('duration was entered');
-    }
+
 }
 
 

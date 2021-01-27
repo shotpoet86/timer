@@ -1,3 +1,4 @@
+'use strict';
 import {Timer} from './timer.js';
 
 const durationInput = document.querySelector('#duration');
