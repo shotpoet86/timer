@@ -1,18 +1,19 @@
 'use strict';
 
 class Timer {
-    constructor(durationInput, startButton, pauseButton) {
-        this.durationInput = durationInput;
+    constructor(durationInput, startButton, pauseButton,{start,pause,onDurationChange} = this) {
         this.startButton = startButton;
         this.pauseButton = pauseButton;
-        this.startButton.addEventListener('click', this.start);
-        this.pauseButton.addEventListener('click', this.pause);
-        this.durationInput.addEventListener('input', this.onDurationChange);
+        this.durationInput = durationInput;
+        this.startButton.addEventListener('click', start);
+        this.pauseButton.addEventListener('click', pause);
+        this.durationInput.addEventListener('input', onDurationChange);
+
     }
 
     start = () => {
         this.tick();
-        this.interval = setInterval(this.tick, 500);
+        this.interval = setInterval(this.tick, 1000);
         document.body.style.backgroundColor = 'green';
 
     };
@@ -27,10 +28,17 @@ class Timer {
     }
 
     tick = () => {
-        console.log('tick was called');
+        this.timeRemaining = this.timeRemaining - 1;
     };
 
 
+    get timeRemaining() {
+        return parseFloat(this.durationInput.value);
+    }
+
+    set timeRemaining(time) {
+        this.durationInput.value = time;
+    }
 }
 
 
