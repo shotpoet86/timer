@@ -1,45 +1,65 @@
-'use strict';
+import {time} from './script.js';
 
 class Timer {
-    constructor(durationInput, startButton, pauseButton,{start,pause,onDurationChange} = this) {
+    constructor(durationInput, startButton, pauseButton, callbacks, {start, pause, onDurationChange} = this) {
         this.startButton = startButton;
         this.pauseButton = pauseButton;
         this.durationInput = durationInput;
+        /*event listeners                                                                                           */
         this.startButton.addEventListener('click', start);
         this.pauseButton.addEventListener('click', pause);
         this.durationInput.addEventListener('input', onDurationChange);
+        /*callback arguments below*/
+        this.onTick = callbacks.onTick;
+        this.onComplete = callbacks.onComplete;
+        if (callbacks) {
+            this.onStart = callbacks.onStart;
+        }
 
     }
 
+    /*jshint ignore:start*/
     start = () => {
+        if (time.onStart) {
+            time.onStart();
+        }
         this.tick();
         this.interval = setInterval(this.tick, 1000);
-        document.body.style.backgroundColor = 'green';
 
     };
 
     pause = () => {
         clearInterval(this.interval);
-        document.body.style.backgroundColor = 'red';
     };
 
     onDurationChange() {
         console.log(`duration was entered`);
-    }
+
+    };
 
     tick = () => {
-        this.timeRemaining = this.timeRemaining - 1;
+        if (this.timeRemaining <= 0) {
+            this.pause();
+            if (time.onComplete) {
+                time.onComplete();
+            }
+        } else {
+            this.timeRemaining = this.timeRemaining - 1;
+            if (time.onTick) {
+                time.onTick();
+            }
+        }
     };
 
 
     get timeRemaining() {
         return parseFloat(this.durationInput.value);
-    }
+    };
 
     set timeRemaining(time) {
         this.durationInput.value = time;
-    }
+    };
 }
 
-
+/*jshint ignore:end*/
 export {Timer};

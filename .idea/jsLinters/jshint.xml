@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="JSHintConfiguration" version="2.12.0" use-config-file="false">
+  <component name="JSHintConfiguration" version="2.12.0" use-config-file="false" custom-config-file-path="$PROJECT_DIR$/../config/.jshintrc">
     <option asi="false" />
     <option bitwise="true" />
     <option boss="false" />
     <option browser="true" />
-    <option browserify="true" />
+    <option browserify="false" />
     <option camelcase="false" />
     <option couch="false" />
     <option curly="true" />
@@ -13,7 +13,7 @@
     <option devel="true" />
     <option dojo="false" />
     <option elision="false" />
-    <option enforceall="false" />
+    <option enforceall="true" />
     <option eqeqeq="true" />
     <option eqnull="false" />
     <option es3="false" />
@@ -22,15 +22,15 @@
     <option evil="false" />
     <option expr="false" />
     <option forin="true" />
-    <option freeze="false" />
+    <option freeze="true" />
     <option funcscope="false" />
     <option futurehostile="false" />
     <option gcl="false" />
     <option globalstrict="false" />
-    <option immed="false" />
+    <option immed="true" />
     <option iterator="false" />
     <option jasmine="false" />
-    <option jquery="true" />
+    <option jquery="false" />
     <option lastsemic="false" />
     <option latedef="true" />
     <option laxbreak="false" />
@@ -42,8 +42,8 @@
     <option mootools="false" />
     <option moz="false" />
     <option multistr="false" />
-    <option newcap="false" />
-    <option noarg="true" />
+    <option newcap="true" />
+    <option noarg="false" />
     <option nocomma="false" />
     <option node="true" />
     <option noempty="true" />
@@ -58,7 +58,7 @@
     <option phantom="false" />
     <option plusplus="false" />
     <option proto="false" />
-    <option prototypejs="true" />
+    <option prototypejs="false" />
     <option qunit="false" />
     <option quotmark="false" />
     <option rhino="false" />
@@ -71,14 +71,14 @@
     <option sub="false" />
     <option supernew="false" />
     <option trailing="false" />
-    <option typed="true" />
+    <option typed="false" />
     <option undef="true" />
     <option unused="true" />
     <option validthis="false" />
     <option varstmt="false" />
     <option white="false" />
     <option withstmt="false" />
-    <option worker="true" />
+    <option worker="false" />
     <option wsh="false" />
     <option yui="false" />
   </component>
