@@ -17,6 +17,6 @@ const time = new Timer(durationInput, startButton, pauseButton,
             console.log('Timer ran out');
             document.body.style.backgroundColor = 'red';
         },
-    })
+    });
 
 export {time};

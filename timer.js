@@ -5,7 +5,7 @@ class Timer {
         this.startButton = startButton;
         this.pauseButton = pauseButton;
         this.durationInput = durationInput;
-        /*event listeners                                                                                           */
+        /*event listeners*/
         this.startButton.addEventListener('click', start);
         this.pauseButton.addEventListener('click', pause);
         this.durationInput.addEventListener('input', onDurationChange);
