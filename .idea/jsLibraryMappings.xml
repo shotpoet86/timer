@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{@types/babel-core, @types/babel__helper-plugin-utils, @types/babel__plugin-transform-runtime, axios, bootstrap}" />
+    <file url="PROJECT" libraries="{76eb417510, @types/babel-core, @types/babel__helper-plugin-utils, @types/babel__plugin-transform-runtime, axios, bootstrap}" />
     <includedPredefinedLibrary name="HTTP Response Handler" />
     <includedPredefinedLibrary name="Node.js Core" />
   </component>

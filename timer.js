@@ -57,7 +57,7 @@ class Timer {
     };
 
     set timeRemaining(time) {
-        this.durationInput.value = time.toFixed(3);
+        this.durationInput.value = time.toFixed(2);
     };
 }
 

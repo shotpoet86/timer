@@ -17,11 +17,9 @@ const time = new Timer(durationInput, startButton, pauseButton,
             circle.setAttribute('stroke-dashoffset', currentOffset);
             currentOffset -= 1;
             console.log('Timer is ticking down');
-            document.body.style.backgroundColor = 'green';
         },
         onComplete() {
             console.log('Timer ran out');
-            document.body.style.backgroundColor = 'red';
         },
     });
 

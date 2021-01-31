@@ -13,5 +13,6 @@
     <orderEntry type="library" name="@types/babel-core" level="application" />
     <orderEntry type="library" name="@types/babel__plugin-transform-runtime" level="application" />
     <orderEntry type="library" name="@types/babel__helper-plugin-utils" level="application" />
+    <orderEntry type="library" name="76eb417510" level="application" />
   </component>
 </module>
